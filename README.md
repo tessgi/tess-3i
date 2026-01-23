@@ -38,5 +38,8 @@ Below is a clean version of the light curve after removing cadences with high ba
 
 If you have questions regarding data processing, access, content, and suggestions on how to improve them in future versions, contact us through the [TSSC helpdesk](https://heasarc.gsfc.nasa.gov/docs/tess/helpdesk.html), GitHub issues in this repository, or via email.
 
+#### Credits
+Development done by [Jorge Martinez-Palomera](https://github.com/jorgemarpa) with the support of the TESS Science Support Center. Based on the `tess-asteroids` package developed by [Amy Tuson](https://github.com/altuson).
+
 ---
 Funding for this work is provided by NASA grants to the TESS Science Support Center.
