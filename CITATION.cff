@@ -1,0 +1,14 @@
+@dataset{martinez_palomera_2026_18344942,
+  author       = {Martínez-Palomera, Jorge and
+                  Tuson, Amy and
+                  TESS Science Support Center},
+  title        = {TSSC comet-centered data products from TESS
+                   3I/ATLAS observations
+                  },
+  month        = jan,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {v1.0},
+  doi          = {10.5281/zenodo.18344942},
+  url          = {https://doi.org/10.5281/zenodo.18344942},
+}

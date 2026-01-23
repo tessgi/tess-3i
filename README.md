@@ -1,6 +1,6 @@
 # TESS - 3I/ATLAS 
 
-This repository contains information on the data reduction and analysis for the high-level science products created by the TESS Science Support Center for the observations of 3I/ATLAS performed in 2026. If you use these in your work, please cite Martinez-Palomera et al. (2026, to be submitted) (Research note describing the creation of these in detail with Zenodo DoI).  This work is based off the data analysis and reduction in [Martinez-Palomera et al. (2025)](https://ui.adsabs.harvard.edu/abs/2025ApJ...994L..51M/abstract).
+This repository contains information on the data reduction and analysis for the high-level science products created by the TESS Science Support Center for the observations of 3I/ATLAS performed in 2026. If you use these in your work, please cite Martinez-Palomera et al. (2026, to be submitted) (Research note describing the creation of these in detail) and the [Zenodo data repository](https://doi.org/10.5281/zenodo.18344942). This work is based off the data analysis and reduction in [Martinez-Palomera et al. (2025)](https://ui.adsabs.harvard.edu/abs/2025ApJ...994L..51M/abstract).
 
 ## January 2026 Data
 
