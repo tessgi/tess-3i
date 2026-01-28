@@ -4,3 +4,6 @@ notebooks/.ipynb_checkpoints
 .mypy_cache
 data/2026/known_asteroids_within_1deg_contingency_mode.txt
 .DS_Store
+notebooks/2026/review_fits_header_hlsp.ipynb
+data/2026/_hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v1.1_lc.fits
+data/2026/_hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v1.1_tp.fits
