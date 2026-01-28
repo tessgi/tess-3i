@@ -20,6 +20,8 @@ No.    Name      Ver    Type      Cards   Dimensions
   3  EXTRAS        1 BinTableHDU     40   513R x 8C  
 ```
 
+NOTE: the WCS stored in the `PIXELS` and `APERTURE` extension are dummy solutions and only included to meet the TPF-like data structure. Because the target moves across the target, the pixel grid changes in time and therefore the reference frame at each frame changes too. If you want to recover the WCS solutions we recommend using `tesswcs` to access the archive of solutions per sector/camera/CCD and times. A tutorial on how to do this can be found in our GitHub tutorials (see below).
+
 Light Curve File
 ---
 `hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v1.1_lc.fits`
