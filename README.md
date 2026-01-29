@@ -31,7 +31,8 @@ The noisier photometric points near BTJD 4056.4 are due to a bright saturated st
     <img alt="TESS Light Curve" src="data/2026/figures/tess_3iatlas_spoc_s1751_lc.png" width="100%">
 </p>
 
-Below is a clean version of the light curve after removing cadences with high background model noise due to the saturated star. We also highlighted times when the comet passed over background stars. The increase in brightness in the PSF photometry during the second segment of data should be investigated when the next orbit data is included.
+Below is a clean version of the light curve after removing cadences with high background model noise due to the saturated star. We also highlighted times when the comet passed over background stars. There's a jitter pattern in the core photometry due to the comet center moving from pixel to pixel. This signal can be removed by using the centroid vectors as bases for a linear regression correction. For more on how to correct see the RegressionCorrector tutorials in the `lightkurve` documentation [here](https://lightkurve.github.io/lightkurve/tutorials/2-creating-light-curves/2-3-removing-scattered-light-using-regressioncorrector.html). 
+The smooth variation seen in the last section of the total aperture photometry is due to remaining residual light. We still need to understand the source of the smooth variation in the PSF core photometry during the last segment, but we believe is not astrophysical and comes from a combination of the residual scattered light and position offset, as the PSF-fitting algorithm assumes the nucleus location is accurate, which is not entirely true. The PSF-fitting is more sensitive to less accurate positions and small background residuals.
 <p align="center">
     <img alt="TESS Light Curve" src="data/2026/figures/tess_3iatlas_spoc_s1751_lc_clean.png" width="100%">
 </p>
