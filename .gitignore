@@ -8,3 +8,4 @@ notebooks/2026/review_fits_header_hlsp.ipynb
 data/2026/_hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v*_lc.fits
 data/2026/_hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v*_tp.fits
 notebooks/2026/make_mTPF_from_ffi_difuse_comp.ipynb
+data/2026/hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v1.2_tp.fits
