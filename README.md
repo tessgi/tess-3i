@@ -8,7 +8,7 @@ This repository contains information on the data reduction and analysis for the 
 TESS observed a field contained 3I/ATLAS (Sector 1751) between January 16th and 22nd, 2026.. 
 For further details on TESS sector 1751 observations visit the [TSSC website](https://heasarc.gsfc.nasa.gov/docs/tess/tess-special-news-bulletin-dec-18th.html).
 
-> **<font color="salmon">As of January 24, 2026, 513 full frame images processed by the SPOC pipeline have been archived, corresponding to observations between 2026-01-15 06:04:18 and 2026-01-19 05:36:52 UTC.</font>**
+> **<font color="lightgreen">All 1835 full frame images processed by the SPOC pipeline have been archived, corresponding to observations between 2026-01-15 06:04:18 and 2026-01-22 11:58:47 UTC.</font>**
 
 The data created here are available in a [Zenodo repository](https://doi.org/10.5281/zenodo.18344942) that will be updated with new data as soon as newly processed full frame images are available at the MAST archive. 
 We will also update this repository with new data products, figures, and details as more data becomes available at the MAST archive.
@@ -20,20 +20,21 @@ Here, you'll find dedicated notebooks to:
 
 Below are animations of the TESS observations of 3I/ATLAS with the raw (left) and corrected (right) images. The corrected images are background (scattered light and stars) subtracted. The bright pixels in the field are residuals from the background subtraction, primarily from very bright stars.
 <p float="left">
-    <img alt="TESS stacked images" src="data/2026/figures/tess_3iatlas_spoc_s1751a_tp_raw.gif" width="49%">
-    <img alt="TESS stacked images" src="data/2026/figures/tess_3iatlas_spoc_s1751a_tp_corrected.gif" width="49%">
+    <img alt="TESS stacked images" src="data/2026/figures/tess_3iatlas_spoc_s1751_tp_raw.gif" width="49%">
+    <img alt="TESS stacked images" src="data/2026/figures/tess_3iatlas_spoc_s1751_tp_corrected.gif" width="49%">
 </p>
 
 
 Below are the light curves extracted from the data. We defined two aperture masks, one for the core (blue) and another for the core plus tail (orange). Additionally we computed PSF photometry which only accounts for the comet nucleus (green).
 The noisier photometric points near BTJD 4056.4 are due to a bright saturated star. The ramped change in brightness in the total flux (orange) at the beginning and end of each segment are due to edge effect in the background star model which affected the tail of the comet. 
 <p align="center">
-    <img alt="TESS Light Curve" src="data/2026/figures/tess_3iatlas_spoc_s1751a_lc.png" width="100%">
+    <img alt="TESS Light Curve" src="data/2026/figures/tess_3iatlas_spoc_s1751_lc.png" width="100%">
 </p>
 
-Below is a clean version of the light curve after removing cadences with high background model noise due to the saturated star. We also highlighted times when the comet passed over background stars. The increase in brightness in the PSF photometry during the second segment of data should be investigated when the next orbit data is included.
+Below is a clean version of the light curve after removing cadences with high background model noise due to the saturated star. We also highlighted times when the comet passed over background stars. There's a jitter pattern in the core photometry due to the comet center moving from pixel to pixel. This signal can be removed by using the centroid vectors as bases for a linear regression correction. For more on how to correct see the RegressionCorrector tutorials in the `lightkurve` documentation [here](https://lightkurve.github.io/lightkurve/tutorials/2-creating-light-curves/2-3-removing-scattered-light-using-regressioncorrector.html). 
+The smooth variation seen in the last section of the total aperture photometry is due to remaining residual light. We still need to understand the source of the smooth variation in the PSF core photometry during the last segment, but we believe is not astrophysical and comes from a combination of the residual scattered light and position offset, as the PSF-fitting algorithm assumes the nucleus location is accurate, which is not entirely true. The PSF-fitting is more sensitive to less accurate positions and small background residuals.
 <p align="center">
-    <img alt="TESS Light Curve" src="data/2026/figures/tess_3iatlas_spoc_s1751a_lc_clean.png" width="100%">
+    <img alt="TESS Light Curve" src="data/2026/figures/tess_3iatlas_spoc_s1751_lc_clean.png" width="100%">
 </p>
 
 
