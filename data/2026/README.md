@@ -8,34 +8,33 @@ The TSSC presents high level data products that contain the pixel corrected flux
 
 Target Pixel File
 ---
-`hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v1.2_tp.fits`
+`hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v2.0_tp.fits`
 Is a multi extension FITS file with the image time series. The `PIXELS` extension contains the image timeseries centered on the comet, the `APERTURE` extension has an example aperture mask used for photometry. The `EXTRA` extension has arrays that help to characterize the data.
 
 ```
-FiFilename: ../../data/2026/hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v1.2_tp.fits
+FiFilename: ../../data/2026/hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v2.0_tp.fits
 No.    Name      Ver    Type      Cards   Dimensions  
-  0  PRIMARY       1 PrimaryHDU      48   ()    
+  0  PRIMARY       1 PrimaryHDU      59   ()      
   1  PIXELS        1 BinTableHDU    204   1835R x 10C 
-  2  APERTURE      1 ImageHDU        43   (91, 91)    
-  3  EXTRAS        1 BinTableHDU     40   1835R x 8C  
+  2  APERTURE      1 ImageHDU        43   (71, 111) 
+  3  EXTRAS        1 BinTableHDU     40   1835R x 8C 
 ```
 
 NOTE: the WCS stored in the `PIXELS` and `APERTURE` extension are dummy solutions and only included to meet the TPF-like data structure. Because the target moves across the target, the pixel grid changes in time and therefore the reference frame at each frame changes too. If you want to recover the WCS solutions we recommend using `tesswcs` to access the archive of solutions per sector/camera/CCD and times. A tutorial on how to do this can be found in our GitHub tutorials (see below).
 
 Light Curve File
 ---
-`hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v1.2_lc.fits`
-Is a multi extension FITS file with the extracted light curves. There are 4 binary tables in the file, two dedicated to aperture photometry, `LIGHTCURVE_AP0` which has the nucleus photometry, `LIGHTCURVE_AP1` which has the nucleus and tail.
-The `LIGHTCURVE_PSF` extension has the PSF photometry of the nucleus, and an `EXTRA` extension with additional 
-arrays that help to characterize the data.
+`hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v2.0_lc.fits`
+Is a multi extension FITS file with the extracted light curves. There are 4 binary tables in the file, three dedicated to aperture photometry. `LIGHTCURVE_AP0` which has the small aperture nucleus photometry, `LIGHTCURVE_AP1` has the large aperture nucleus photometry, and `LIGHTCURVE_AP2` has the total aperture photometry which includes nucleus and tail.
+The `EXTRA` extension has additional arrays that help to characterize the data.
 
 ```
-Filename: ../../data/2026/hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v1.2_lc.fits
-No.    Name          Ver    Type      Cards   Dimensions 
-  0  PRIMARY           1 PrimaryHDU      46   ()      
-  1  LIGHTCURVE_AP0    1 BinTableHDU     90   1835R x 20C 
-  2  LIGHTCURVE_AP1    1 BinTableHDU     90   1835R x 20C 
-  3  LIGHTCURVE_PSF    1 BinTableHDU     70   1835R x 16C 
+Filename: ../../data/2026/hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v2.0_lc.fits
+No.    Name          Ver    Type      Cards   Dimensions   
+  0  PRIMARY           1 PrimaryHDU      57   ()      
+  1  LIGHTCURVE_AP0    1 BinTableHDU    106   1835R x 24C 
+  2  LIGHTCURVE_AP1    1 BinTableHDU    106   1835R x 24C 
+  3  LIGHTCURVE_AP2    1 BinTableHDU    106   1835R x 24C 
   4  EXTRAS            1 BinTableHDU     55   1835R x 13C 
   ```
 
