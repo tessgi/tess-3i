@@ -15,7 +15,7 @@ We will also update this repository with new data products, figures, and details
 
 Here, you'll find dedicated notebooks to:
 * Create object-centered moving TPF from TESS sector 1751 using [tess-asteroids](https://altuson.github.io/tess-asteroids/), which models the scattered background light and star field and extracts lightcurves using aperture photometry. 
-  * Using the SPOC full-frame images [here](notebooks/2026/make_mTPF_from_ffi.ipynb).
+  * Using the SPOC full-frame images [here](notebooks/2026/make_mTPF_from_ffi.ipynb) ([interactive view](https://nbviewer.org/github/tessgi/tess-3i/blob/v2.0/notebooks/2026/make_mTPF_from_ffi.ipynb)).
 * Open the data products published in this [Zenodo](https://doi.org/10.5281/zenodo.18344942) repository, [here](notebooks/2026/open_hlsp_data.ipynb).
 
 Below are animations of the TESS observations of 3I/ATLAS with the raw (left) and corrected (right) images. The corrected images are background (scattered light and stars) subtracted. The bright pixels in the field are residuals from the background subtraction, primarily from very bright stars.
