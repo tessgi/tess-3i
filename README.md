@@ -14,25 +14,29 @@ The data created here are available in a [Zenodo repository](https://doi.org/10.
 We will also update this repository with new data products, figures, and details as more data becomes available at the MAST archive.
 
 Here, you'll find dedicated notebooks to:
-* Create object-centered moving TPF from TESS sector 1751 using [tess-asteroids](https://altuson.github.io/tess-asteroids/), which models the scattered background light and star field and extracts lightcurves using aperture and PSF photometry. 
-  * Using the SPOC full-frame images [here](notebooks/2026/make_mTPF_from_ffi.ipynb).
+* Create object-centered moving TPF from TESS sector 1751 using [tess-asteroids](https://altuson.github.io/tess-asteroids/), which models the scattered background light and star field and extracts lightcurves using aperture photometry. 
+  * Using the SPOC full-frame images [here](notebooks/2026/make_mTPF_from_ffi.ipynb) ([interactive view](https://nbviewer.org/github/tessgi/tess-3i/blob/v2.0/notebooks/2026/make_mTPF_from_ffi.ipynb)).
 * Open the data products published in this [Zenodo](https://doi.org/10.5281/zenodo.18344942) repository, [here](notebooks/2026/open_hlsp_data.ipynb).
 
 Below are animations of the TESS observations of 3I/ATLAS with the raw (left) and corrected (right) images. The corrected images are background (scattered light and stars) subtracted. The bright pixels in the field are residuals from the background subtraction, primarily from very bright stars.
-<p float="left">
+<p align="center">
     <img alt="TESS stacked images" src="data/2026/figures/tess_3iatlas_spoc_s1751_tp_raw.gif" width="49%">
     <img alt="TESS stacked images" src="data/2026/figures/tess_3iatlas_spoc_s1751_tp_corrected.gif" width="49%">
 </p>
 
+We defined three aperture mask to compute our light curves. The next figures show the core small, core large and total (core + tail) apertures.
+<p align="center">
+    <img alt="TESS stacked images" src="data/2026/figures/tess_3iatlas_spoc_s1751_core_apertures.png" width="49%">
+    <img alt="TESS stacked images" src="data/2026/figures/tess_3iatlas_spoc_s1751_total_apertures.png" width="25.5%">
+</p>
 
-Below are the light curves extracted from the data. We defined two aperture masks, one for the core (blue) and another for the core plus tail (orange). Additionally we computed PSF photometry which only accounts for the comet nucleus (green).
+Below are the light curves extracted from the data. We defined three aperture masks, a small one for the core (green), a large core aperture (blue), and a total aperture (orange) which includes core and tail.
 The noisier photometric points near BTJD 4056.4 are due to a bright saturated star. The ramped change in brightness in the total flux (orange) at the beginning and end of each segment are due to edge effect in the background star model which affected the tail of the comet. 
 <p align="center">
     <img alt="TESS Light Curve" src="data/2026/figures/tess_3iatlas_spoc_s1751_lc.png" width="100%">
 </p>
 
-Below is a clean version of the light curve after removing cadences with high background model noise due to the saturated star. We also highlighted times when the comet passed over background stars. There's a jitter pattern in the core photometry due to the comet center moving from pixel to pixel. This signal can be removed by using the centroid vectors as bases for a linear regression correction. For more on how to correct see the RegressionCorrector tutorials in the `lightkurve` documentation [here](https://lightkurve.github.io/lightkurve/tutorials/2-creating-light-curves/2-3-removing-scattered-light-using-regressioncorrector.html). 
-The smooth variation seen in the last section of the total aperture photometry is due to remaining residual light. We still need to understand the source of the smooth variation in the PSF core photometry during the last segment, but we believe is not astrophysical and comes from a combination of the residual scattered light and position offset, as the PSF-fitting algorithm assumes the nucleus location is accurate, which is not entirely true. The PSF-fitting is more sensitive to less accurate positions and small background residuals.
+Below is a clean version of the light curve after removing cadences with high background model noise due to the saturated star and correcting the jitter motion using a [linear regression corrector](https://lightkurve.github.io/lightkurve/tutorials/2-creating-light-curves/2-3-removing-scattered-light-using-regressioncorrector.html). We also highlighted times when the comet passed over background stars. 
 <p align="center">
     <img alt="TESS Light Curve" src="data/2026/figures/tess_3iatlas_spoc_s1751_lc_clean.png" width="100%">
 </p>
@@ -40,7 +44,20 @@ The smooth variation seen in the last section of the total aperture photometry i
 
 If you have questions regarding data processing, access, content, and suggestions on how to improve them in future versions, contact us through the [TSSC helpdesk](https://heasarc.gsfc.nasa.gov/docs/tess/helpdesk.html), GitHub issues in this repository, or via email.
 
-#### Credits
+## Change Log
+
+### v2.0
+* We increase the size of the image cutout to (H,W) = (111, 71) pixels to include more pixels in the axis comet's tail direction. 
+* We remove the PSF photometry light curve from our data products due to subpar quality. For details see the discussion at the end of the data analysis notebook [here](/notebooks/2026/make_mTPF_from_ffi.ipynb).
+* Added detrended version of the light curves computed with a linear regression model.
+
+### v1.2
+* Added the second part of the data from BTJD 4060 to 4063.
+
+### v1.1
+* Added the remaining data from the first part of the sector between BTJD 4059 to 4060
+
+## Credits
 Development done by [Jorge Martinez-Palomera](https://github.com/jorgemarpa) with the support of the [TESS Science Support Center](https://heasarc.gsfc.nasa.gov/docs/tess/). Based on the `tess-asteroids` package developed by [Amy Tuson](https://github.com/altuson).
 
 ---
