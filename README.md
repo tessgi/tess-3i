@@ -57,7 +57,7 @@ If you have questions regarding data processing, access, content, and suggestion
 ### v1.1
 * Added the remaining data from the first part of the sector between BTJD 4059 to 4060
 
-#### Credits
+## Credits
 Development done by [Jorge Martinez-Palomera](https://github.com/jorgemarpa) with the support of the [TESS Science Support Center](https://heasarc.gsfc.nasa.gov/docs/tess/). Based on the `tess-asteroids` package developed by [Amy Tuson](https://github.com/altuson).
 
 ---
