@@ -1,6 +1,7 @@
 data/.DS_Store
 notebooks/__pycache__
 notebooks/.ipynb_checkpoints
+notebooks/2026/.ipynb_checkpoints
 .mypy_cache
 data/2026/known_asteroids_within_1deg_contingency_mode.txt
 .DS_Store
@@ -15,3 +16,5 @@ data/2026/figures/tess_3iatlas_spoc_s1751_rnaas.png
 data/2026/figures/tess_3iatlas_spoc_s1751_tp_corr_4062.gif
 data/2026/figures/tess_3iatlas_spoc_s1751_tp_pixq_4062.gif
 data/2026/figures/tess_3iatlas_spoc_s1751_tp_raw_4062.gif
+notebooks/2026/make_mTPF_from_ffi_testing_bkg.ipynb
+notebooks/2026/open_hlsp_data-Copy1.ipynb
