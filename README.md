@@ -20,25 +20,25 @@ Here, you'll find dedicated notebooks to:
 
 Below are animations of the TESS observations of 3I/ATLAS with the raw (left) and corrected (right) images. The corrected images are background (scattered light and stars) subtracted. The bright pixels in the field are residuals from the background subtraction, primarily from very bright stars.
 <p align="center">
-    <img alt="TESS stacked images" src="data/2026/figures/tess_3iatlas_spoc_s1751_tp_raw.gif" width="49%">
-    <img alt="TESS stacked images" src="data/2026/figures/tess_3iatlas_spoc_s1751_tp_corrected.gif" width="49%">
+    <img alt="TESS stacked images" src="data/2026/figures/tess_3iatlas_spoc_s1751_ffi_tp_raw.gif" width="49%">
+    <img alt="TESS stacked images" src="data/2026/figures/tess_3iatlas_spoc_s1751_ffi_tp_corrected.gif" width="49%">
 </p>
 
 We defined three aperture mask to compute our light curves. The next figures show the core small, core large and total (core + tail) apertures.
 <p align="center">
-    <img alt="TESS stacked images" src="data/2026/figures/tess_3iatlas_spoc_s1751_core_apertures.png" width="49%">
-    <img alt="TESS stacked images" src="data/2026/figures/tess_3iatlas_spoc_s1751_total_apertures.png" width="25.5%">
+    <img alt="TESS stacked images" src="data/2026/figures/tess_3iatlas_spoc_s1751_ffi_core_apertures.png" width="49%">
+    <img alt="TESS stacked images" src="data/2026/figures/tess_3iatlas_spoc_s1751_ffi_total_apertures.png" width="25.5%">
 </p>
 
 Below are the light curves extracted from the data. We defined three aperture masks, a small one for the core (green), a large core aperture (blue), and a total aperture (orange) which includes core and tail.
 The noisier photometric points near BTJD 4056.4 are due to a bright saturated star. The ramped change in brightness in the total flux (orange) at the beginning and end of each segment are due to edge effect in the background star model which affected the tail of the comet. 
 <p align="center">
-    <img alt="TESS Light Curve" src="data/2026/figures/tess_3iatlas_spoc_s1751_lc.png" width="100%">
+    <img alt="TESS Light Curve" src="data/2026/figures/tess_3iatlas_spoc_s1751_ffi_lc.png" width="100%">
 </p>
 
 Below is a clean version of the light curve after removing cadences with high background model noise due to the saturated star and correcting the jitter motion using a [linear regression corrector](https://lightkurve.github.io/lightkurve/tutorials/2-creating-light-curves/2-3-removing-scattered-light-using-regressioncorrector.html). We also highlighted times when the comet passed over background stars. 
 <p align="center">
-    <img alt="TESS Light Curve" src="data/2026/figures/tess_3iatlas_spoc_s1751_lc_clean.png" width="100%">
+    <img alt="TESS Light Curve" src="data/2026/figures/tess_3iatlas_spoc_s1751_ffi_lc_clean.png" width="100%">
 </p>
 
 

@@ -18,3 +18,4 @@ data/2026/figures/tess_3iatlas_spoc_s1751_tp_pixq_4062.gif
 data/2026/figures/tess_3iatlas_spoc_s1751_tp_raw_4062.gif
 notebooks/2026/make_mTPF_from_ffi_testing_bkg.ipynb
 notebooks/2026/open_hlsp_data-Copy1.ipynb
+data/2026/tpfs/*.fits
