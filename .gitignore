@@ -20,3 +20,4 @@ notebooks/2026/make_mTPF_from_ffi_testing_bkg.ipynb
 notebooks/2026/open_hlsp_data-Copy1.ipynb
 data/2026/tpfs/*.fits
 data/2026/hlsp_tess-3i_tess*_3iatlas-s1751-cam2-ccd3_tess_v*_tp.fits
+data/2026/_hlsp_tess-3i_tess*_3iatlas-s1751-cam2-ccd3_tess_v*_*.fits
