@@ -1,7 +1,7 @@
 # TESS - 3I/ATLAS 
 ---
 
-This repository contains information on the data reduction and analysis for the High Level Science Products (HLSP) created by the TESS Science Support Center (TSSC) for the observations of 3I/ATLAS performed in 2026. If you use these in your work, please cite Martinez-Palomera et al. (2026, to be submitted) (Research note describing the creation of these in detail) and the [Zenodo data repository](https://doi.org/10.5281/zenodo.18344942). This work is based off the data analysis and reduction in [Martinez-Palomera et al. (2025)](https://ui.adsabs.harvard.edu/abs/2025ApJ...994L..51M/abstract).
+This repository contains information on the data reduction and analysis for the High Level Science Products (HLSP) created by the TESS Science Support Center (TSSC) for the observations of 3I/ATLAS performed in 2026. If you use these in your work, please cite [Martinez-Palomera et al. (2026)](https://ui.adsabs.harvard.edu/abs/2026RNAAS..10...28M/abstract) (Research Note describing the creation of these in detail) and the [Zenodo data repository](https://doi.org/10.5281/zenodo.18344942). This data set will also be available soon at [MAST](https://archive.stsci.edu/contents/newsletters/january-2026/tess-3i-atlas). This work is based off the data analysis and reduction in [Martinez-Palomera et al. (2025)](https://ui.adsabs.harvard.edu/abs/2025ApJ...994L..51M/abstract).
 
 ## January 2026 Data
 
@@ -9,6 +9,8 @@ TESS observed a field contained 3I/ATLAS (Sector 1751) between January 16th and 
 For further details on TESS sector 1751 observations visit the [TSSC website](https://heasarc.gsfc.nasa.gov/docs/tess/tess-special-news-bulletin-dec-18th.html).
 
 > **<font color="lightgreen">All 1835 full frame images processed by the SPOC pipeline have been archived, corresponding to observations between 2026-01-15 06:04:18 and 2026-01-22 11:58:47 UTC.</font>**
+> 
+> **<font color="tabblue">A total of 3044 frames from the Target Pixel Files (TPF) 20s candence data processed by the SPOC pipeline have been archived, corresponding to observations between 2026-01-15 06:04:18 and 2026-01-22 11:58:47 UTC.</font>**
 
 The data created here are available in a [Zenodo repository](https://doi.org/10.5281/zenodo.18344942) that will be updated with new data as soon as newly processed full frame images are available at the MAST archive. 
 We will also update this repository with new data products, figures, and details as more data becomes available at the MAST archive.
@@ -16,6 +18,7 @@ We will also update this repository with new data products, figures, and details
 Here, you'll find dedicated notebooks to:
 * Create object-centered moving TPF from TESS sector 1751 using [tess-asteroids](https://altuson.github.io/tess-asteroids/), which models the scattered background light and star field and extracts lightcurves using aperture photometry. 
   * Using the SPOC full-frame images [here](notebooks/2026/make_mTPF_from_ffi.ipynb) ([interactive view](https://nbviewer.org/github/tessgi/tess-3i/blob/v2.0/notebooks/2026/make_mTPF_from_ffi.ipynb)).
+  * Using the SPOC TPF data [here](notebooks/2026/make_mTPF_from_tpf.ipynb).
 * Open the data products published in this [Zenodo](https://doi.org/10.5281/zenodo.18344942) repository, [here](notebooks/2026/open_hlsp_data.ipynb).
 
 Below are animations of the TESS observations of 3I/ATLAS with the raw (left) and corrected (right) images. The corrected images are background (scattered light and stars) subtracted. The bright pixels in the field are residuals from the background subtraction, primarily from very bright stars.

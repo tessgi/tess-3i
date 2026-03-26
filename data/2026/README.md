@@ -3,13 +3,15 @@
 NASA's TESS performed dedicated observations of the comet 3I/ATLAS during January 15 and 22, 2026. These observations have been split into two segments, due to spacecraft orbit and data downlink. For more details on these observations visit the [TESS Science Support Center (TSSC)](https://heasarc.gsfc.nasa.gov/docs/tess/tess-special-observation-of-interstellar-comet-3iatlas-update-jan-16th.html) webpage. 
 
 > **<font color="lightgreen">All 1835 full frame images processed by the SPOC pipeline have been archived, corresponding to observations between 2026-01-15 06:04:18 and 2026-01-22 11:58:47 UTC.</font>**
+> **<font color="tabblue">A total of 3044 frames from the Target Pixel Files (TPF) 20s candence data processed by the SPOC pipeline have been archived, corresponding to observations between 2026-01-15 06:04:18 and 2026-01-22 11:58:47 UTC.</font>**
 
 The TSSC presents high level data products that contain the pixel corrected flux and the comet light curve. This document describe the data products contained in this folder which are of two types.
 
 Target Pixel File
 ---
 `hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v2.0_tp.fits`
-Is a multi extension FITS file with the image time series. The `PIXELS` extension contains the image timeseries centered on the comet, the `APERTURE` extension has an example aperture mask used for photometry. The `EXTRA` extension has arrays that help to characterize the data.
+`hlsp_tess-3i_tess_tpf-20s_3iatlas-s1751-cam2-ccd3_tess_v2.0_tp.fits`
+Are multi extension FITS file with the image time series, one for the 200s cadence (from the full frame images FFI - `ffi`) and another for the 20s cadence (from the TPFs - `tpf-20s`). The `PIXELS` extension contains the image timeseries centered on the comet, the `APERTURE` extension has an example aperture mask used for photometry. The `EXTRA` extension has arrays that help to characterize the data.
 
 ```
 FiFilename: ../../data/2026/hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v2.0_tp.fits
@@ -25,7 +27,8 @@ NOTE: the WCS stored in the `PIXELS` and `APERTURE` extension are dummy solution
 Light Curve File
 ---
 `hlsp_tess-3i_tess_ffi_3iatlas-s1751-cam2-ccd3_tess_v2.0_lc.fits`
-Is a multi extension FITS file with the extracted light curves. There are 4 binary tables in the file, three dedicated to aperture photometry. `LIGHTCURVE_AP0` which has the small aperture nucleus photometry, `LIGHTCURVE_AP1` has the large aperture nucleus photometry, and `LIGHTCURVE_AP2` has the total aperture photometry which includes nucleus and tail.
+`hlsp_tess-3i_tess_tpf-20s_3iatlas-s1751-cam2-ccd3_tess_v2.0_lc.fits`
+Are multi extension FITS file with the extracted light curves, one for the 200s cadence (from the full frame images FFI - `ffi`) and another for the 20s cadence (from the TPFs - `tpf-20s`). There are 4 binary tables in the file, three dedicated to aperture photometry. `LIGHTCURVE_AP0` which has the small aperture nucleus photometry, `LIGHTCURVE_AP1` has the large aperture nucleus photometry, and `LIGHTCURVE_AP2` has the total aperture photometry which includes nucleus and tail.
 The `EXTRA` extension has additional arrays that help to characterize the data.
 
 ```
