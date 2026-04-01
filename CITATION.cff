@@ -12,3 +12,23 @@
   doi          = {10.5281/zenodo.18344942},
   url          = {https://doi.org/10.5281/zenodo.18344942},
 }
+
+@ARTICLE{2026RNAAS..10...28M,
+       author = {{Martinez-Palomera}, Jorge and {Tuson}, Amy and {TESS Science Support Center}},
+        title = "{TSSC Comet-centered Data Products from TESS 3I/ATLAS Observations}",
+      journal = {Research Notes of the American Astronomical Society},
+     keywords = {Interstellar objects, Comets, Time domain astronomy, Photometry, 52, 280, 2109, 1234, Earth and Planetary Astrophysics, Astrophysics of Galaxies, Instrumentation and Methods for Astrophysics},
+         year = 2026,
+        month = feb,
+       volume = {10},
+       number = {2},
+          eid = {28},
+        pages = {28},
+          doi = {10.3847/2515-5172/ae43bd},
+archivePrefix = {arXiv},
+       eprint = {2602.12364},
+ primaryClass = {astro-ph.EP},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2026RNAAS..10...28M},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+

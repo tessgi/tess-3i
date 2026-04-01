@@ -104,11 +104,16 @@ If you have questions regarding data processing, access, content, and suggestion
 
 ## Change Log
 
+### v2.1 [03/01/2026]
+
+* Adding 20s TPF data, image cutout is (H,W) = (93, 35), the width axis is the maximum allowed from the 50x50 TPF data in order to get a uniform cutout. There are 3,044 frames in the data cubes and time series.
+* Adding diagnostic plots for the 20s data
+* New demo notebook with 20s data extraction and correction.
+
 ### v2.0
 * We increase the size of the image cutout to (H,W) = (111, 71) pixels to include more pixels in the axis comet's tail direction. 
 * We remove the PSF photometry light curve from our data products due to subpar quality. For details see the discussion at the end of the data analysis notebook [here](/notebooks/2026/make_mTPF_from_ffi.ipynb).
 * Added detrended version of the light curves computed with a linear regression model.
-* **[03/01/2026]** Adding 20s TPF data, image cutout is (H,W) = (93, 35), the width axis is the maximum allowed from the 50x50 TPF data in order to get a uniform cutout. There are 3,044 frames in the data cubes and time series.
 
 ### v1.2
 * Added the second part of the data from BTJD 4060 to 4063.
@@ -116,19 +121,8 @@ If you have questions regarding data processing, access, content, and suggestion
 ### v1.1
 * Added the remaining data from the first part of the sector between BTJD 4059 to 4060
 
-## Credits
-Development done by [Jorge Martinez-Palomera](https://github.com/jorgemarpa) with the support of the [TESS Science Support Center](https://heasarc.gsfc.nasa.gov/docs/tess/). Based on the `tess-asteroids` package developed by [Amy Tuson](https://github.com/altuson).
-
 ---
-
-
-### v1.2
-* Added the second part of the data from BTJD 4060 to 4063.
-
-### v1.1
-* Added the remaining data from the first part of the sector between BTJD 4059 to 4060
 
 ## Credits
 Development done by [Jorge Martinez-Palomera](https://github.com/jorgemarpa) with the support of the [TESS Science Support Center](https://heasarc.gsfc.nasa.gov/docs/tess/). Based on the `tess-asteroids` package developed by [Amy Tuson](https://github.com/altuson).
 
----
