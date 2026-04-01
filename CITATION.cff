@@ -13,7 +13,7 @@
   url          = {https://doi.org/10.5281/zenodo.18344942},
 }
 
-@ARTICLE{2026RNAAS..10...28M,
+@article{2026RNAAS..10...28M,
        author = {{Martinez-Palomera}, Jorge and {Tuson}, Amy and {TESS Science Support Center}},
         title = "{TSSC Comet-centered Data Products from TESS 3I/ATLAS Observations}",
       journal = {Research Notes of the American Astronomical Society},
