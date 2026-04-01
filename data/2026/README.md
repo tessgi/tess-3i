@@ -3,6 +3,7 @@
 NASA's TESS performed dedicated observations of the comet 3I/ATLAS during January 15 and 22, 2026. These observations have been split into two segments, due to spacecraft orbit and data downlink. For more details on these observations visit the [TESS Science Support Center (TSSC)](https://heasarc.gsfc.nasa.gov/docs/tess/tess-special-observation-of-interstellar-comet-3iatlas-update-jan-16th.html) webpage. 
 
 > **<font color="lightgreen">All 1835 full frame images processed by the SPOC pipeline have been archived, corresponding to observations between 2026-01-15 06:04:18 and 2026-01-22 11:58:47 UTC.</font>**
+> 
 > **<font color="tabblue">A total of 3044 frames from the Target Pixel Files (TPF) 20s candence data processed by the SPOC pipeline have been archived, corresponding to observations between 2026-01-15 06:04:18 and 2026-01-22 11:58:47 UTC.</font>**
 
 The TSSC presents high level data products that contain the pixel corrected flux and the comet light curve. This document describe the data products contained in this folder which are of two types.
