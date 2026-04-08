@@ -23,3 +23,4 @@ data/2026/hlsp_tess-3i_tess*_3iatlas-s1751-cam2-ccd3_tess_v*_tp.fits
 data/2026/_hlsp_tess-3i_tess*_3iatlas-s1751-cam2-ccd3_tess_v*_*.fits
 notebooks/2026/make_mTPF_from_ffi_slcube.ipynb
 data/2026/ffi_cubes_bin8_sector1751_2-3_light.fits
+data/2026/hlsp_tess-3i_tess_tpf_3iatlas-s1751-cam2-ccd3_tess_v2.0_fast-tp.fits
